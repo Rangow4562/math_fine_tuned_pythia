@@ -1,0 +1,7 @@
+transformers 
+datasets 
+faiss-cpu 
+nltk 
+torch
+scikit-learn
+git+https://github.com/huggingface/accelerate
