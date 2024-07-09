@@ -116,6 +116,29 @@ Describe how to run tests for the project:
 python -m unittest discover -s tests -p "*.py"
 ```
 
+8. Model's Link
+
+#1 : fine_tuned_pythia_70m
+
+```
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("entity2260/pythia-70m")
+model = AutoModelForCausalLM.from_pretrained("entity2260/pythia-70m")
+```
+
+#2 : instruct_finetuned_pythia_70m
+
+
+```
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained("entity2260/algebra_linear_1d")
+model = AutoModelForSeq2SeqLM.from_pretrained("entity2260/algebra_linear_1d")
+```
+
 
 ### To run with docker (with containerised csv outputs) use
 ```
